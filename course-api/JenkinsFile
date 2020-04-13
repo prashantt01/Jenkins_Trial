@@ -17,11 +17,7 @@ pipeline {
                bat label: '', script: '''cd course-api
                 mvn clean install -Dmaven.test.skip=true'''
             }
-            post {
-                success {
-                    junit 'target/surefire-reports/**/*.xml' 
-                }
-            }
+            
         }
     }
 }
