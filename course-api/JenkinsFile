@@ -15,7 +15,7 @@ pipeline {
         stage ('Build') {
             steps {
                bat label: '', script: '''cd course-api
-                mvn clean install'''
+                mvn clean install -Dmaven.test.skip=true'''
             }
             post {
                 success {
